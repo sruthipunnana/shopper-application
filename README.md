@@ -1,17 +1,24 @@
-Features:
- 1. Login with Google Authentication
- 2. Add Product to the UI
- 3. Add to Cart Feature
- 4. Displaying the cart products on table with total price
- 5. Enter the Customer Details
- 6. Integrating with Stripe.com for online payments.
 
-Technologies Used: 
-1. For Google Authentication, FireBase Auth has been used.
-2. For storing the data, Firestore database has been used.
-3. Basic form has been build using html5 and bootstrap for Addproducts feature.
-4. React Hooks has been used for building the UI.
-5. React-Bootstrap is used for Pop-up functionality on cart button.
-6. Jquery has been used in products.html and customer.html files.
-7. The project has been integrated to Stripe.com for payments.
-    
+
+Features
+Google Authentication: Enables users to log in using Google Authentication via Firebase Auth.
+Data-Storage: FireStore DB
+Add Product to UI: Allows users to add products to the user interface.
+Add to Cart Feature: Functionality to add items to a cart.
+Display Cart Products: Displays cart products in a table along with the total price.
+Enter Customer Details: Provides a form for entering customer details.
+Integration with Stripe.com: Utilizes Stripe.com for online payments.
+
+Technologies Used
+Firebase Auth: For Google Authentication.
+Firestore Database: For storing data.
+HTML5 and Bootstrap: Used to create basic forms for the Add Products feature.
+React Hooks: Utilized for building the UI.
+React-Bootstrap: Implemented for pop-up functionality on the cart button.
+jQuery: Used in specific HTML files (products.html and customer.html).
+Stripe.com Integration: Integrated with the project for handling payments.
+
+Setup and Installation
+https://shopper-app-psi.vercel.app
+
+
