@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import {Routes,Route} from 'react-router-dom'
+import {Navbar} from './components/Navbar'
+import {Card} from './components/Card'
+import { Login } from './components/Login';
+import { AddProducts } from './components/AddProducts';
+import React from 'react';
+import { CustomerData } from './components/CustomerData';
 
-function App() {
+export const myCart= React.createContext()
+function App() { 
+  const [isLoggedIn,setIsLoggedIn]= React.useState(false)
+  const [cart,setCart]= React.useState({})
+  console.log(isLoggedIn)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <myCart.Provider  value={{cart, setCart}}>
+      <Navbar data={isLoggedIn} setData={setIsLoggedIn}  />
+      <Routes>
+      <Route path='/login' element={<Login setData={setIsLoggedIn} />}/>
+        <Route path='/' element={<Card data={isLoggedIn}/>}/>
+        <Route path='/add' element={<AddProducts/>}/>
+       
+        
+      </Routes>
+      </myCart.Provider>
+      <CustomerData/>
     </div>
   );
 }
